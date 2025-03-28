@@ -1,0 +1,26 @@
+<launch>
+
+  	<!--- Run optimization test node -->
+   	<node pkg="teb_local_planner" type="test_optim_node" name="test_optim_node" output="screen" >
+        <remap from="/teb_obstacles" to="/filtered_obstacles"/>
+    </node>
+  	<!--- test_obstacle -->
+   	<!-- <node pkg="teb_local_planner" type="test_obstacle" name="test_obstacle" output="screen" /> -->
+
+  	<!--- test_via -->
+   	<!-- <node pkg="teb_local_planner" type="test_via" name="test_via" output="screen" /> -->
+
+  	<!--- test_start_end -->
+   	<!-- <node pkg="teb_local_planner" type="test_start_end" name="test_start_end" output="screen" /> -->
+
+	<!--- nike filter -->
+	<!-- <node pkg="teb_local_planner" type="teb_path_filter" name="teb_path_filter" output="screen" /> -->
+  	
+	<!-- RVIZ -->
+  	<!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find teb_local_planner)/cfg/rviz_test_optim.rviz" /> -->
+
+	<!-- rosservice call /test_via1 "{}" -->
+	<!-- rosservice call /test_start_end_1 "{}" -->
+
+</launch>
+
