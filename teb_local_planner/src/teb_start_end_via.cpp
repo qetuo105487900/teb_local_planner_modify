@@ -981,6 +981,7 @@ int main(int argc, char **argv)
     teb_start_end_vias_pub = nh.advertise<campusrover_msgs::TEBStartEndViasMsg>("/teb_start_end_vias", 10);
     global_path_end_pub = nh.advertise<geometry_msgs::PoseStamped>("/global_path_end", 10);
     start_lock_pub = nh.advertise<std_msgs::Bool>("/start_lock", 10);
+    marker_pub = nh.advertise<std_msgs::Bool>("/adjust_candidate", 10);
 
     via_client = nh.serviceClient<campusrover_msgs::TEBVias>("/teb_via_points");
     start_end_client = nh.serviceClient<campusrover_msgs::TEBStartEnd>("/teb_start_end");
